@@ -1,0 +1,45 @@
+{
+  "name": "credit-card-processor-service",
+  "version": "1.0.0",
+  "description": "Credit Card Processing service APIs to store and view account informations.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test:lint": "eslint --ignore-path .gitignore --ignore-path .eslintignore . || true",
+    "testlintfix": "eslint --ignore-path .gitignore --ignore-path .eslintignore . --fix",
+    "test:unit": "mocha \"test/*.spec.js\" --timeout 60000 --exit",
+    "tests": "npm run test:unit && npm run test:coverage",
+    "test:coverage": "nyc --reporter-lcov --report-dir ./.coverage npm run test:unit"
+  },
+  "author": "Bharat Vaswani",
+  "license": "ISC",
+  "dependencies": {
+    "@dwp/eslint-config-base": "^6.0.0",
+    "aws-param-env": "^2.1.0",
+    "aws-param-store": "^3.2.0",
+    "aws-sdk": "^2.1209.0",
+    "body-parser": "^1.20.0",
+    "bunyan": "^1.8.15",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "dotenv-safe": "^8.2.0",
+    "eslint": "^8.23.0",
+    "express": "^4.18.1",
+    "helmet": "^6.0.0",
+    "https": "^1.0.0",
+    "ioredis": "^5.2.3",
+    "joi": "^17.6.0",
+    "nyc": "^15.1.0",
+    "passport": "^0.6.0",
+    "passport-headerapikey": "^1.2.2"
+  },
+  "devDependencies": {
+    "@types/sinon": "^10.0.13",
+    "@types/supertest": "^2.0.12",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "sinon": "^14.0.0",
+    "supertest": "^6.2.4"
+  }
+}

@@ -1,0 +1,9 @@
+process.env.HTTPS_SERVER=false;
+process.env.NODE_ENV='test';
+process.env.PORT=4444;
+process.env.SERVICE_NAME='credit-card-processor-service';
+process.env.TARGET_ENV='test';
+process.env.CERT_LOCATION='';
+process.env.HTTPS_KEY='';
+process.env.HTTPS_CERT='';
+process.env.API_KEY='x';
